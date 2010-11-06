@@ -18,16 +18,17 @@
         <connection>scm:git:git://github.com/gilgamez/scala-base.git</connection>
         <url>scm:git:git://github.com/gilgamez/scala-base.git</url>
     </scm>
-        <distributionManagement>
+    <distributionManagement>
         <snapshotRepository>
-            <id>local-snapshots</id>
-            <name>local-snapshots</name>
-            <url>file:repository</url>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://github.com/gilgamez/maven-repo/raw/master/snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
         <repository>
-            <id>local-releases</id>
-            <name>local-releases</name>
-            <url>file:repository</url>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://github.com/gilgamez/maven-repo/raw/master/releases</url>
         </repository>
     </distributionManagement>
 
@@ -36,6 +37,20 @@
             <id>scala-tools.org</id>
             <name>Scala-Tools Maven2 Repository</name>
             <url>http://scala-tools.org/repo-releases</url>
+        </repository>
+        <repository>
+            <id>gilgamez-github-releases</id>
+            <url>http://github.com/gilgamez/maven-repo/raw/master/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>gilgamez-github-snapshots</id>
+            <url>http://github.com/gilgamez/maven-repo/raw/master/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
@@ -116,4 +131,28 @@
             </plugin>
         </plugins>
     </reporting>
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <properties>
+                <repository.base>${basedir}/../maven-repo</repository.base>
+            </properties>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>snapshots</id>
+                    <name>Snapshots</name>
+                    <url>file:${repository.base}/snapshots</url>
+                    <uniqueVersion>false</uniqueVersion>
+                </snapshotRepository>
+                <repository>
+                    <id>releases</id>
+                    <name>Releases</name>
+                    <url>file:${repository.base}/releases</url>
+                </repository>
+            </distributionManagement>
+            <build>
+                <defaultGoal>deploy</defaultGoal>
+            </build>
+        </profile>
+    </profiles>
 </project>
