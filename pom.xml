@@ -132,4 +132,17 @@
             </plugin>
         </plugins>
     </reporting>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/../../../maven-repo</exists>
+                </file>
+            </activation>
+            <properties>
+                <repository.base>${basedir}/../../../maven-repo</repository.base>
+            </properties>
+        </profile>
+    </profiles>
 </project>
