@@ -17,6 +17,7 @@
     </properties>
     <scm>
         <connection>scm:git:git://github.com/gilgamez/scala-base.git</connection>
+        <developerConnection>scm:git:git@github.com:gilgamez/scala-base.git</developerConnection>
         <url>scm:git:git://github.com/gilgamez/scala-base.git</url>
     </scm>
     <distributionManagement>
