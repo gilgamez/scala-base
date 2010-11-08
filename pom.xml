@@ -18,7 +18,6 @@
     <scm>
         <connection>scm:git:git://github.com/gilgamez/scala-base.git</connection>
         <url>scm:git:git://github.com/gilgamez/scala-base.git</url>
-        <developerConnection>scm:git:git://git@github.com/gilgamez/scala-base.git</developerConnection>
     </scm>
     <distributionManagement>
         <snapshotRepository>
