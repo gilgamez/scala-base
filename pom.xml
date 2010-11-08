@@ -40,14 +40,14 @@
         </repository>
         <repository>
             <id>gilgamez-github-releases</id>
-            <url>http://github.com/gilgamez/maven-repo/raw/master/releases</url>
+            <url>https://github.com/gilgamez/maven-repo/raw/master/releases</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
         </repository>
         <repository>
             <id>gilgamez-github-snapshots</id>
-            <url>http://github.com/gilgamez/maven-repo/raw/master/snapshots</url>
+            <url>https://github.com/gilgamez/maven-repo/raw/master/snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
