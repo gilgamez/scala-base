@@ -4,7 +4,7 @@
     <groupId>gilgamez</groupId>
     <artifactId>scala-base</artifactId>
     <name>Scala Base</name>
-    <version>4</version>
+    <version>5-SNAPSHOT</version>
     <inceptionYear>2010</inceptionYear>
     <packaging>pom</packaging>
     <properties>
